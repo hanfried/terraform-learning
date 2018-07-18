@@ -1,6 +1,6 @@
 provider "google" {
   credentials = "${file(".credentials/hanfried-terraform-learning-3d5ec50ce95e.json")}"
-  project = "hanfried-terraform-learning-3d5ec50ce95e"
+  project = "hanfried-terraform-learning"
   region = "europe-west3"
 }
 
