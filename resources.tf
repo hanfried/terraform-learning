@@ -3,6 +3,13 @@ resource "google_compute_network" "my_dev_network" {
   auto_create_subnetworks = false
 }
 
+resource "google_compute_subnetwork" "dev-subnet" {
+  ip_cidr_range = "10.0.1.0/24"
+  name = "devsubnet"
+  network = "${google_compute_network.my_dev_network.self_link}"
+  region = "europe-west3"
+}
+
 resource "aws_vpc" "environment-example-2" {
   cidr_block = "10.0.0.0/16"
   enable_dns_hostnames = true
