@@ -1,11 +1,3 @@
-variable "kubey_pass" {
-  type = "string"
-}
-
-variable "kubey_username" {
-  type = "string"
-}
-
 resource "google_container_cluster" "kubey" {
   name = "kubeycluster"
   zone = "europe-west3-a"
