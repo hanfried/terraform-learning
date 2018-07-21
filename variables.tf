@@ -39,3 +39,12 @@ variable "kubey_pass" {
 variable "kubey_username" {
   type = "string"
 }
+
+
+output "aws_cidr_subnet1" {
+  value = "${aws_subnet.subnet1.cidr_block}"
+}
+
+output "aws_cidr_subnet2" {
+  value = "${aws_subnet.subnet2.cidr_block}"
+}
